@@ -21,6 +21,9 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "Fernando Abreu", 
 
 ```
 
+Or open a browser and navigate to http://localhost:5000/
+
+
 ## Expected response patterns
 ```
 curl -H "Content-Type: application/json" http://0.0.0.0:5000/
