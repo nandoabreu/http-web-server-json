@@ -16,6 +16,16 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "Fernando Abreu", 
 
 ```
 
+## Expected response patterns
+```
+curl -H "Content-Type: application/json" http://0.0.0.0:5000/
+{"response_at": "2021-03-20 20:41:34.829849", "response_from": "worker_hostname"}
+```
+```
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Fernando Abreu", "GitHub": "nandoabreu"}' http://0.0.0.0:5000/
+{"name": "Fernando Abreu", "GitHub": "nandoabreu", "received_at": "2021-03-20 20:41:34.847726", "received_from": "worker_hostname"}
+```
+
 ## Logs
 ```
 make logs
