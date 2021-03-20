@@ -2,6 +2,11 @@
 
 Basic scaled HTTP server responding GET and POST with JSON. This project was designed for development testing proposal.
 
+## Requirements
+- Docker  
+- Docker compose  
+- curl (optional)
+
 ## Initiate
 
 ```
