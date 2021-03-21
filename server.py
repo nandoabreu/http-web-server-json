@@ -15,7 +15,7 @@ class Server(BaseHTTPRequestHandler):
 
     def do_GET(self):
         self._set_headers()
-        response = {'response_at': str(_dt.now()), 'response_from': platform.node()}
+        response = {'response_at': str(_dt.now()), 'response_by': platform.node()}
         self.wfile.write(json.dumps(response).encode('utf-8'))
 
     def do_POST(self):
@@ -29,7 +29,7 @@ class Server(BaseHTTPRequestHandler):
         length = int(self.headers.get('content-length'))
         message = json.loads(self.rfile.read(length))
         message['received_at'] = str(_dt.now())
-        message['received_from'] = platform.node()
+        message['received_by'] = platform.node()
 
         self._set_headers()
         self.wfile.write(json.dumps(message).encode('utf-8'))
